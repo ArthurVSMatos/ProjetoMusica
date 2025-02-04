@@ -1,0 +1,132 @@
+/* Corpo da página - fundo inicial preto */
+body {
+    background-color: black; /* Fundo preto inicial */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition: background-color 4s ease, background-image 4s ease; /* Transição suave para o fundo */
+    position: relative;
+    opacity: 1; /* Garante que o conteúdo seja visível */
+}
+
+/* Quando o site é revelado */
+body.revealed {
+    background-image: url('Imagem Site.jpg'); /* Fundo da página */
+    background-size: cover;
+    background-position: center;
+    opacity: 1; /* Garante que a opacidade se ajuste de forma suave */
+}
+
+/* Botão de interrogação com animação de crescimento ao passar o mouse */
+button#start {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease; /* Apenas a animação de crescimento */
+}
+
+button#start:hover {
+    transform: scale(1.1); /* Aumento sutil ao passar o mouse */
+}
+
+/* Contêiner principal do site (escondido inicialmente) */
+#site-content {
+    display: none;
+    text-align: center;
+    transition: opacity 4s ease-in-out; /* Suaviza a aparição do conteúdo */
+    opacity: 0; /* Começa invisível */
+}
+
+/* Quando o conteúdo é revelado */
+body.revealed #site-content {
+    display: block;
+    opacity: 1; /* Mostra o conteúdo suavemente */
+}
+
+/* Contagem regressiva dentro de um botão preto */
+#countdown {
+    background: black; /* Fundo preto */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px; /* Bordas arredondadas */
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    cursor: default;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+/* Ícones das redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    opacity: 1; /* Garante que os ícones apareçam sem demora */
+    visibility: visible; /* Garante que os ícones sejam visíveis */
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* Transição suave para os ícones */
+}
+
+.social-icons button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.social-icons button:hover {
+    transform: scale(1.1);
+    background: #222;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    button#start {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icons button {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    #countdown {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
