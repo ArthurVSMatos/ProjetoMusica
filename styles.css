@@ -1,6 +1,6 @@
 /* Corpo da página - fundo inicial preto */
 body {
-    background-color: black; /* Fundo preto inicial */
+    background-color: black; 
     color: white;
     display: flex;
     justify-content: center;
@@ -9,20 +9,20 @@ body {
     margin: 0;
     overflow: hidden;
     flex-direction: column;
-    transition: background-color 4s ease, background-image 4s ease; /* Transição suave para o fundo */
+    transition: background-color 4s ease, background-image 4s ease;
     position: relative;
-    opacity: 1; /* Garante que o conteúdo seja visível */
+    opacity: 1; 
 }
 
 /* Quando o site é revelado */
 body.revealed {
-    background-image: url('Imagem Site.jpg'); /* Fundo da página */
+    background-image: url('Imagem Site.jpg'); 
     background-size: cover;
     background-position: center;
-    opacity: 1; /* Garante que a opacidade se ajuste de forma suave */
+    opacity: 1; 
 }
 
-/* Botão de interrogação com animação de crescimento ao passar o mouse */
+
 button#start {
     background-color: white;
     color: black;
@@ -40,28 +40,28 @@ button#start {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.3s ease; /* Apenas a animação de crescimento */
+    transition: transform 0.3s ease; 
 }
 
 button#start:hover {
-    transform: scale(1.1); /* Aumento sutil ao passar o mouse */
+    transform: scale(1.1); 
 }
 
-/* Contêiner principal do site (escondido inicialmente) */
+/* Contêiner principal do site */
 #site-content {
     display: none;
     text-align: center;
-    transition: opacity 4s ease-in-out; /* Suaviza a aparição do conteúdo */
-    opacity: 0; /* Começa invisível */
+    transition: opacity 4s ease-in-out; /* Aparição suave do conteudo */
+    opacity: 0; 
 }
 
-/* Quando o conteúdo é revelado */
+
 body.revealed #site-content {
     display: block;
-    opacity: 1; /* Mostra o conteúdo suavemente */
+    opacity: 1; 
 }
 
-/* Contagem regressiva dentro de um botão preto */
+/* contagem regressiva dentro do botao preto */
 #countdown {
     background: black; /* Fundo preto */
     color: white;
@@ -75,13 +75,13 @@ body.revealed #site-content {
     display: inline-block;
 }
 
-/* Ícones das redes sociais */
+
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
-    opacity: 1; /* Garante que os ícones apareçam sem demora */
+    opacity: 1; 
     visibility: visible; /* Garante que os ícones sejam visíveis */
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* Transição suave para os ícones */
 }
