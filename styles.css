@@ -1,4 +1,3 @@
-/* Corpo da página - fundo inicial preto */
 body {
     background-color: black; 
     color: white;
@@ -21,7 +20,6 @@ body.revealed {
     background-position: center;
     opacity: 1; 
 }
-
 
 button#start {
     background-color: white;
@@ -55,7 +53,6 @@ button#start:hover {
     opacity: 0; 
 }
 
-
 body.revealed #site-content {
     display: block;
     opacity: 1; 
@@ -73,6 +70,7 @@ body.revealed #site-content {
     cursor: default;
     margin-bottom: 20px;
     display: inline-block;
+}
 
 /* Botão de lançamento escondido inicialmente */
 #launch-button {
@@ -94,12 +92,12 @@ body.revealed #site-content {
 #launch-button:hover {
     background: #333;
 }
+
 button:empty {
     display: none;
 }
 
 /* Ícones das redes sociais */
-
 .social-icons {
     display: flex;
     justify-content: center;
@@ -153,5 +151,4 @@ button:empty {
         font-size: 18px;
         padding: 10px 20px;
     }
-}
 }
