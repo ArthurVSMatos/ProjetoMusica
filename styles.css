@@ -73,8 +73,32 @@ body.revealed #site-content {
     cursor: default;
     margin-bottom: 20px;
     display: inline-block;
+
+/* Botão de lançamento escondido inicialmente */
+#launch-button {
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease-in-out;
 }
 
+#launch-button:hover {
+    background: #333;
+}
+button:empty {
+    display: none;
+}
+
+/* Ícones das redes sociais */
 
 .social-icons {
     display: flex;
@@ -129,4 +153,5 @@ body.revealed #site-content {
         font-size: 18px;
         padding: 10px 20px;
     }
+}
 }

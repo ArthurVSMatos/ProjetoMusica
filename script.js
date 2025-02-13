@@ -16,17 +16,36 @@ document.getElementById("start").addEventListener("click", function() {
     audio.play(); // Tenta reproduzir o áudio
 });
 
-/// Definindo a data e hora do evento: 05/02 às 17h
-let targetDate = new Date("2025-02-05T17:00:00");
+// Definindo a data e hora do evento
+let targetDate = new Date("2025-02-16T13:00:00");
 
 // Função para atualizar o temporizador
+
 function updateCountdown() {
     let now = new Date();
     let difference = targetDate - now;
 
     if (difference <= 0) {
-        document.getElementById("countdown").innerHTML = "Lançamento!";
-        return;
+        // Quando a contagem chegar a zero, esconde a contagem regressiva
+        document.getElementById("countdown").innerHTML = "";
+
+        // Ocultar qualquer outro botão ou elemento indesejado
+        let startButton = document.getElementById("start");
+        startButton.style.display = "none";  // Esconde o botão de interrogação
+
+        // Exibe o botão de lançamento
+        let launchButton = document.getElementById("launch-button");
+        
+        // Fazendo o botão aparecer com uma animação suave
+        launchButton.style.display = "inline-block"; // Exibe o botão
+        launchButton.style.opacity = 1; // Torna o botão visível
+        launchButton.style.visibility = "visible"; // Torna o botão visível
+
+        // Defina o link do lançamento
+        launchButton.href = "https://www.youtube.com/watch?v=TFWob6OuS64"; 
+        launchButton.target = "_blank"; // Abre em nova aba
+
+        return; // Para o contador de continuar a atualização
     }
 
     // Cálculo de dias, horas, minutos e segundos
